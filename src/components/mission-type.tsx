@@ -14,6 +14,7 @@ const MissionType = () => {
     console.log(selected);
   }
 
+  // chosen = selected;
   return (
     <>
       <div className=" bg-gray-800  rounded-xl ">
@@ -39,12 +40,11 @@ const MissionType = () => {
               } z-30 br-1  col-span-1 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0  cursor-pointer  `}
             >
               <Icon icon="lucide:waypoints" width="24" height="24" />
-              <span className="ml-1">Waypooint</span>
+              <span className="ml-1">Waypoint</span>
             </button>
           </div>
         </div>
       </div>
-      <DroneMap />
     </>
   );
 };
