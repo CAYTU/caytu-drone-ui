@@ -3,54 +3,47 @@ https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/
 https://icon-sets.iconify.design/pepicons-print/map/
 
 https://github.com/naomigrace/nextjs-with-mapbox-gl-js/
+styles:
+        selected == 'first'
+          ? [
+              // ACTIVE (being drawn)
+              // line stroke
+              {
+                id: 'gl-draw-line',
+                type: 'line',
+                filter: [
+                  'all',
+                  ['==', '$type', 'LineString'],
+                  ['!=', 'mode', 'static'],
+                ],
+                layout: {
+                  'line-cap': 'round',
+                  'line-join': 'round',
+                },
+                paint: {
+                  'line-color': '#3b9ddd',
+                  // 'line-dasharray': [0.2, 2],
+                  'line-width': 4,
+                  'line-opacity': 0.7,
+                },
+              },
+            ]
+          : [
+              // ACTIVE (being drawn)
 
-//  Chose line or polygon based on selected
-          
-        // ACTIVE (being drawn)
-        // line stroke
-        // {
-        //   id: 'gl-draw-line',
-        //   type: 'line',
-        //   filter: [
-        //     'all',
-        //     ['==', '$type', 'LineString'],
-        //     ['!=', 'mode', 'static'],
-        //   ],
-        //   layout: {
-        //     'line-cap': 'round',
-        //     'line-join': 'round',
-        //   },
-        //   paint: {
-        //     'line-color': '#3b9ddd',
-        //     // 'line-dasharray': [0.2, 2],
-        //     'line-width': 4,
-        //     'line-opacity': 0.7,
-        //   },
-        },
-        // polygon fill
-        // {
-        //     id: 'gl-draw-polygon-fill',
-        //     type: 'fill',
-        //     filter: ['all', ['==', '$type', 'Polygon'], ['!=', 'mode', 'static']],
-        //     paint: {
-        //         'fill-color': '#3b9ddd',
-        //         'fill-outline-color': '#3b9ddd',
-        //         'fill-opacity': 0.1
-        //     }
-        // },
-        // // polygon outline
-        // {
-        //     id: 'gl-draw-polygon-stroke',
-        //     type: 'line',
-        //     filter: ['all', ['==', '$type', 'Polygon'], ['!=', 'mode', 'static']],
-        //     layout: {
-        //         'line-cap': 'round',
-        //         'line-join': 'round'
-        //     },
-        //     paint: {
-        //         'line-color': '#3b9ddd',
-        //         'line-dasharray': [0.2, 2],
-        //         'line-width': 4,
-        //         'line-opacity': 0.7
-        //     }
-        // },
+              // polygon fill
+              {
+                // id: 'gl-draw-polygon-fill',
+                // type: 'fill',
+                // filter: [
+                //   'all',
+                //   ['==', '$type', 'Polygon'],
+                //   ['!=', 'mode', 'static'],
+                // ],
+                // paint: {
+                //   'fill-color': '#3b9ddd',
+                //   'fill-outline-color': '#3b9ddd',
+                //   'fill-opacity': 0.1,
+                // },
+              },
+            ],
