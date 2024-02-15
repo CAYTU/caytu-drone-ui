@@ -98,7 +98,7 @@ export default function Home() {
         // The second argument is the DOM element that represents the marker.
         {
           color: '#FF0000',
-          backgroundImage: "url('../../../../public/drone-icon.png')",
+          backgroundImage: "url('./drone-icon.png')",
           width: '50px',
           height: '50px',
           cursor: 'pointer',
