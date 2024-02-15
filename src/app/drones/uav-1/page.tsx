@@ -12,19 +12,7 @@ const GraphicDesignPage = () => {
       <div className="my-10">
         <span className="font-bold text-4xl">Dji Drones</span>
       </div>
-      {/* <div className="bg-white rounded-lg flex justify-center">
-        <Image
-          src="/drone3.png"
-          height={200}
-          width={300}
-          alt="Desktop perfume image"
-          className=" h-full min-w-[250px]"
-        />
-      </div> */}
 
-      {/* <div className="border-dashed border border-zinc-500 w-full h-12 rounded-lg"></div>
-      <div className="border-dashed border border-zinc-500 w-full h-64 rounded-lg"></div> */}
-      {/* <MissionType /> */}
       <div className="">
         <div className="">
           <DroneMap />
